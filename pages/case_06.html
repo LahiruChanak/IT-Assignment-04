@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case 06 - Improved</title>
+
+    <link rel="icon" href="/assets/images/logo.png" />
+
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .sky {
+        width: 100%;
+        height: 65%;
+        object-fit: cover;
+      }
+
+      .city-road-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 400%;
+        height: 35%;
+        animation: left-right 5s linear 1;
+      }
+
+      .city {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        bottom: 35vh;
+        left: 0;
+      }
+
+      .road {
+        width: 100%;
+        height: 35vh;
+        object-fit: cover;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .car {
+        width: 25%;
+        height: auto;
+        position: fixed;
+        bottom: 21%;
+        left: 52.5%;
+        transform: translate(-50%, 0);
+      }
+
+      .wheel {
+        width: 5%;
+        height: auto;
+        position: fixed;
+        bottom: 21%;
+        animation: rotate 5s linear 1;
+      }
+
+      #wheel-1 {
+        left: 42%;
+      }
+
+      #wheel-2 {
+        left: 57.2%;
+      }
+
+      @keyframes left-right {
+        0% {
+          transform: translateX(0);
+        }
+
+        70% {
+          transform: translateX(-55%);
+        }
+
+        100% {
+          transform: translateX(-75%);
+        }
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        70% {
+          transform: rotate(-720deg);
+        }
+
+        100% {
+          transform: rotate(-540deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="/assets/images/sky.jpg" alt="sky image" class="sky" />
+
+      <div class="city-road-container">
+        <img src="/assets/images/city.png" alt="city image" class="city" />
+        <img src="/assets/images/road.jpg" alt="road image" class="road" />
+      </div>
+
+      <div>
+        <img src="/assets/images/car.png" alt="car image" class="car" />
+
+        <img
+          src="/assets/images/wheel.png"
+          alt="wheel image"
+          class="wheel"
+          id="wheel-1"
+        />
+        <img
+          src="/assets/images/wheel.png"
+          alt="wheel image"
+          class="wheel"
+          id="wheel-2"
+        />
+      </div>
+    </div>
+  </body>
+</html>
