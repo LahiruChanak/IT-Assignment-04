@@ -33,6 +33,13 @@
         border: 20px solid #fff;
         border-top-color: #ff3041;
         z-index: 1;
+        transition: transform 1s ease;
+        transform: rotate(var(--rotation, 0deg));
+        cursor: pointer;
+      }
+
+      #circle-1:active {
+        --rotation: calc(var(--rotation, 0deg) + 360deg);
       }
 
       #circle-2 {
@@ -43,7 +50,7 @@
         position: absolute;
       }
 
-      #circle-1:hover {
+      /* #circle-1:hover {
         animation: loading 1.3s linear 1;
       }
 
@@ -55,7 +62,7 @@
         to {
           transform: rotate(360deg);
         }
-      }
+      } */
     </style>
   </head>
   <body>

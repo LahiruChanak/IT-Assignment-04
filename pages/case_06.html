@@ -26,6 +26,8 @@
 
       .city-road-container {
         position: absolute;
+        display: flex;
+        flex-direction: column;
         bottom: 0;
         left: 0;
         width: 400%;
@@ -33,19 +35,18 @@
         animation: left-right 5s linear 1;
       }
 
-      .city {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      .city-container {
+        display: flex;
+        align-items: center;
         position: absolute;
         bottom: 35vh;
-        left: 0;
+        left: 0%;
       }
 
-      .road {
-        width: 100%;
+      .road-container {
+        display: flex;
+        align-items: center;
         height: 35vh;
-        object-fit: cover;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -82,7 +83,7 @@
         }
 
         70% {
-          transform: translateX(-55%);
+          transform: translateX(-60%);
         }
 
         100% {
@@ -110,8 +111,18 @@
       <img src="/assets/images/sky.jpg" alt="sky image" class="sky" />
 
       <div class="city-road-container">
-        <img src="/assets/images/city.png" alt="city image" class="city" />
-        <img src="/assets/images/road.jpg" alt="road image" class="road" />
+        <div class="city-container">
+          <img src="/assets/images/city.png" alt="city image" class="city" />
+          <img src="/assets/images/city.png" alt="city image" class="city" />
+          <img src="/assets/images/city.png" alt="city image" class="city" />
+          <img src="/assets/images/city.png" alt="city image" class="city" />
+          <img src="/assets/images/city.png" alt="city image" class="city" />
+        </div>
+
+        <div class="road-container">
+          <img src="/assets/images/road.jpg" alt="road image" class="road" />
+          <img src="/assets/images/road.jpg" alt="road image" class="road" />
+        </div>
       </div>
 
       <div>
